@@ -1,18 +1,18 @@
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate} from "react-router-dom";
 import Home from "./components/homepage/Home"
 import Header from "./components/header/Header"
 import "./index.css";
 
 function Index() {
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header></Header>
         <Routes>
-          <Route path="*" element={<Navigate to="/My-Personal-Webpage/home"/>}></Route>
-          <Route path='/My-Personal-Webpage/home' element={<Home />} />
+          <Route path="*" element={<Navigate to="/home"/>}></Route>
+          <Route path='/home' element={<Home />} />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
