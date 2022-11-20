@@ -9,8 +9,8 @@ function Index() {
     <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="*" element={<Navigate to="/home"/>}></Route>
-          <Route path='/home' element={<Home />} />
+          <Route path="*" element={<Navigate to="/My-Personal-Webpage/home"/>}></Route>
+          <Route path='/My-Personal-Webpage/home' element={<Home />} />
         </Routes>
     </BrowserRouter>
   )
