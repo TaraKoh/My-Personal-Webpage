@@ -1,7 +1,54 @@
 .Homepage{
+  position: relative;
+  height: 93%;
   background-image: url(../../images/HOMEPAGE.png);
-  height: calc(100% - 70px);
   background-size: contain;
   background-repeat: no-repeat;
-  /* margin: 0px 80px 0px 80px; */
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.Book {
+  position: absolute;
+  top: 38%;
+  left: 30%;
+  transform: scale(1.1);
+}
+
+.About {
+  position: absolute;
+  top: 20%;
+  left: 11%;
+}
+
+.WeChatSticker{
+  position: absolute;
+  bottom: 2%;
+  left: 15%;
+}
+
+.Comics{
+  position: absolute;
+  top: 62%;
+  right: 25%;
+}
+
+.Sketches{
+  position: absolute;
+  right: 17%;
+  top: 4%;
+}
+
+.Journal{
+  position: absolute;
+  right: 6%;
+  top: 17%;
+}
+
+.hrefButton{
+  transform: scale(0.8);
+}
+.hrefButton:hover {
+  transform: scale(1.1);
+  cursor:pointer;
 }

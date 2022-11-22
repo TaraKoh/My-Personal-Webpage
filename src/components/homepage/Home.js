@@ -11,12 +11,12 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="Homepage">
-          {/* <img src={bookButton} alt="Book"></img>
-          <img src={aboutButton} alt="About"></img>
-          <img src={wechatStickerButton} alt="WeChat Sticker"></img>
-          <img src={comicsButton} alt="Comics"></img>
-          <img src={sketchesButton} alt="Sketches"></img>
-          <img src={journalButton} alt="Journal"></img> */}
+          <img className="Book hrefButton" src={bookButton} alt="Book"></img>
+          <img className="About hrefButton" src={aboutButton} alt="About"></img>
+          <img className="WeChatSticker hrefButton" src={wechatStickerButton} alt="WeChatSticker"></img>
+          <img className="Comics hrefButton" src={comicsButton} alt="Comics"></img>
+          <img className="Sketches hrefButton" src={sketchesButton} alt="Sketches"></img>
+          <img className="Journal hrefButton" src={journalButton} alt="Journal"></img>
       </div>
     );
   }
