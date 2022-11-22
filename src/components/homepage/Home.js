@@ -1,29 +1,22 @@
 import React from "react";
 import "./Home.css";
+import bookButton from "../../images/BOOK.png"
+import aboutButton from "../../images/ABOUT.png"
+import wechatStickerButton from "../../images/WECHATSTICKER.png"
+import comicsButton from "../../images/COMICS.png"
+import sketchesButton from "../../images/SKETCHES.png"
+import journalButton from "../../images/JOURNAL.png"
 
 export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src="Octocat.png" className="App-logo" alt="logo" />
-          <p>
-            GitHub Codespaces <span className="heart">♥️</span> React
-          </p>
-          <p className="small">
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Re
-            </a>
-          </p>
-        </header>
+      <div className="Homepage">
+          {/* <img src={bookButton} alt="Book"></img>
+          <img src={aboutButton} alt="About"></img>
+          <img src={wechatStickerButton} alt="WeChat Sticker"></img>
+          <img src={comicsButton} alt="Comics"></img>
+          <img src={sketchesButton} alt="Sketches"></img>
+          <img src={journalButton} alt="Journal"></img> */}
       </div>
     );
   }
