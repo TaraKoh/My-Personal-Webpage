@@ -2,17 +2,33 @@
     height: 7%;
     width: 100%;
     background-color: #a6937c;
+    display: flex;
+    justify-content: space-between;
+}
+.HeaderLogo h2 {
+    display: flex;
+    float: left;
+    height: 100%;
+    margin: auto 0 auto 25px;
+    color: white;
+    font-size: 42px;
+}
+.HeaderLogo h3 {
+    display: inline-block;
+    height: 100%;
+    margin: 15px 0 auto 25px;
+    color: white;
+    font-size: 25px;
 }
 .HeaderContainer {
     display: flex;
     float: right;
     font-size: 2rem;
     height: 100%;
-    line-height: 1.7rem;
     color: white !important;
-    margin-top: 1%;
-    width: 182px;
-    margin-right: 13px;
+    margin-top: 10px;
+    width: 270px;
+    margin-right: 25px;
     justify-content: space-between;
 }
 .HeaderContainer a {

@@ -1,0 +1,64 @@
+.comics {
+    height: 93%;
+    text-align: center;
+    padding: 4rem 4rem;
+    background: floralwhite;
+}
+
+.comicsHeader {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0 auto 3rem auto;
+}
+
+.comicsGird {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    width: 100%;
+}
+
+.window {
+    position: relative;
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px gray;
+    border: 2px solid red;
+}
+
+.comicsGird .window::after {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+}
+
+.mainBlock {
+    position: absolute;
+    height: 100%;
+}
+
+.pictureBlock {
+    height: 64%;
+    overflow: hidden;
+    margin: 20px 20px 10px 20px;
+    border: 1px solid black;
+}
+
+.bottomBlock {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 10px 20px;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.comicImage {
+    width: 50%;
+}
