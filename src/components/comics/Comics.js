@@ -9,12 +9,12 @@ export default class Comics extends React.Component {
                 {
                     title: "Soup",
                     date: "2022/11/24",
-                    description: "This is a test description about my comics",
+                    description: "This is a test description about my comics. This is a test description about my comics.",
                     imageSrc:["Soup1.jpg", "Soup2.jpg"]
                 }, {
                     title: "Watersports",
                     date: "2022/11/24",
-                    description: "This is a test description about my comics",
+                    description: "This is a test description about my comics. This is a test description about my comics. This is a test description about my comics. This is a test description about my comics.",
                     imageSrc:["Watersport1.jpg", "Watersport2.jpg"]
                 }, {
                     title: "What's in Lobbster",
@@ -28,15 +28,15 @@ export default class Comics extends React.Component {
                     description: "This is a test description about my comics",
                     imageSrc: ["Outlets.jpg"]
                 }, {
-                    title: "想吃汉堡",
+                    title: "清补凉",
                     date: "2022/11/24",
                     description: "This is a test description about my comics",
-                    imageSrc:["Soup1.jpg", "Soup2.jpg"]
+                    imageSrc:["Qingbuliang.jpg"]
                 }, {
-                    title: "胖了",
+                    title: "Traveling Illustration",
                     date: "2022/11/24",
                     description: "This is a test description about my comics",
-                    imageSrc:["Soup1.jpg", "Soup2.jpg"]
+                    imageSrc:["Sanya1.png", "Sanya2.jpg", "Sanya3.jpg", "Sanya4.jpg"]
                 }
             ]
         }
@@ -54,9 +54,11 @@ export default class Comics extends React.Component {
                                         <div className="pictureBlock">
                                             {item.imageSrc.map((image, index) => {
                                                 if (item.imageSrc.length === 1) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"100%"}} alt="ImgPreview-1"></img>
+                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"100%"}} alt="ImgPreview"></img>
                                                 } else if (item.imageSrc.length === 2) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} alt="ImgPreview-1"></img>
+                                                    return <img className="comicImage" src={require("../../images/" + image)} alt="ImgPreview"></img>
+                                                } else if (item.imageSrc.length === 4) {
+                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"50%"}} alt="ImgPreview"></img>
                                                 } else {
                                                     return <></>
                                                 }

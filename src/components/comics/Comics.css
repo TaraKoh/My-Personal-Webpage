@@ -1,5 +1,5 @@
 .comics {
-    height: 93%;
+    /* height: 93%; */
     text-align: center;
     padding: 4rem 4rem;
     background: floralwhite;
@@ -22,10 +22,16 @@
 
 .window {
     position: relative;
-    background: whitesmoke;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px gray;
-    border: 2px solid red;
+    background: #fbfaf8;
+    border-radius: 10px;
+    box-shadow: 4px 4px 9px gainsboro;
+    border: 2px solid darkgray;
+}
+
+.window:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out 0ms
 }
 
 .comicsGird .window::after {
@@ -42,23 +48,43 @@
 .pictureBlock {
     height: 64%;
     overflow: hidden;
-    margin: 20px 20px 10px 20px;
-    border: 1px solid black;
+    margin: 20px 20px 5px 20px;
+    border: 2px solid #a39a90;
 }
 
 .bottomBlock {
     display: flex;
     flex-direction: column;
-    margin: 0px 20px 10px 20px;
+    margin: 0px 30px 0px 30px;
+    height: 25%;
+    overflow: hidden;
 }
 
 .line {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 5px 5px 0 5px;
 }
 
 .comicImage {
     width: 50%;
+}
+
+.title,
+.date {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #444444;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #444444;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;  /* 显示几行 */
+    overflow: hidden;
 }
