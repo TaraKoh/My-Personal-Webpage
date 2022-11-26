@@ -47,16 +47,16 @@ export default class Comics extends React.Component {
                 <h2 className="comicsHeader">Here's the Collection of My Comics Published Online</h2>
                 <div className="comicsGird">
                     {
-                        this.states.dataList.map((item, index) => {
+                        this.states.dataList.map((item, itemIndex) => {
                             return (
-                                <div className="window">
+                                <div className="window" key={itemIndex}>
                                     <div className="mainBlock">
                                         <div className="pictureBlock">
-                                            {item.imageSrc.map((image, index) => {
+                                            {item.imageSrc.map((image, imageIndex) => {
                                                 if (item.imageSrc.length === 1) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"100%"}} alt="ImgPreview-1"></img>
+                                                    return <img className="comicImage" key={imageIndex} src={require("../../images/" + image)} style={{width:"100%"}} alt="ImgPreview-1"></img>
                                                 } else if (item.imageSrc.length === 2) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} alt="ImgPreview-1"></img>
+                                                    return <img className="comicImage" key={imageIndex} src={require("../../images/" + image)} alt="ImgPreview-1"></img>
                                                 } else {
                                                     return <></>
                                                 }
