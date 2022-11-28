@@ -15,7 +15,7 @@ class Home extends React.PureComponent  {
   }
 
   toPath = (path) => {
-    this.props.to('/comics')
+    this.props.to(path)
   }
 
   render() {
@@ -24,7 +24,7 @@ class Home extends React.PureComponent  {
           <img className="Book hrefButton" src={bookButton} alt="Book"></img>
           <img className="About hrefButton" src={aboutButton} alt="About"></img>
           <img className="WeChatSticker hrefButton" src={wechatStickerButton} alt="WeChatSticker"></img>
-          <img className="Comics hrefButton" src={comicsButton} alt="Comics" onClick={this.toPath}></img>
+          <img className="Comics hrefButton" src={comicsButton} alt="Comics" onClick={this.toPath.bind(this, '/comics')}></img>
           <img className="Sketches hrefButton" src={sketchesButton} alt="Sketches"></img>
           <img className="Journal hrefButton" src={journalButton} alt="Journal"></img>
       </div>
@@ -32,5 +32,5 @@ class Home extends React.PureComponent  {
   }
 }
 
-const QilinCompont= widthHook(Home)
-export default widthHook(QilinCompont)
+const HomeComponent = widthHook(Home)
+export default widthHook(HomeComponent)

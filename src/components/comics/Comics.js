@@ -10,12 +10,12 @@ export default class Comics extends React.Component {
                     title: "Soup",
                     date: "2022/11/24",
                     description: "This is a test description about my comics. This is a test description about my comics.",
-                    imageSrc:["Soup1.jpg", "Soup2.jpg"]
+                    imageSrc: ["Soup1.jpg", "Soup2.jpg"]
                 }, {
                     title: "Watersports",
                     date: "2022/11/24",
                     description: "This is a test description about my comics. This is a test description about my comics. This is a test description about my comics. This is a test description about my comics.",
-                    imageSrc:["Watersport1.jpg", "Watersport2.jpg"]
+                    imageSrc: ["Watersport1.jpg", "Watersport2.jpg"]
                 }, {
                     title: "What's in Lobbster",
                     date: "2022/11/24",
@@ -31,12 +31,12 @@ export default class Comics extends React.Component {
                     title: "清补凉",
                     date: "2022/11/24",
                     description: "This is a test description about my comics",
-                    imageSrc:["Qingbuliang.jpg"]
+                    imageSrc: ["Qingbuliang.jpg"]
                 }, {
                     title: "Traveling Illustration",
                     date: "2022/11/24",
                     description: "This is a test description about my comics",
-                    imageSrc:["Sanya1.png", "Sanya2.jpg", "Sanya3.jpg", "Sanya4.jpg"]
+                    imageSrc: ["Sanya1.png", "Sanya2.jpg", "Sanya3.jpg", "Sanya4.jpg"]
                 }
             ]
         }
@@ -47,18 +47,18 @@ export default class Comics extends React.Component {
                 <h2 className="comicsHeader">Here's the Collection of My Comics Published Online</h2>
                 <div className="comicsGird">
                     {
-                        this.states.dataList.map((item, index) => {
+                        this.states.dataList.map((item, itemIndex) => {
                             return (
-                                <div className="window">
+                                <div className="window" key={itemIndex}>
                                     <div className="mainBlock">
                                         <div className="pictureBlock">
-                                            {item.imageSrc.map((image, index) => {
+                                            {item.imageSrc.map((image, imageIndex) => {
                                                 if (item.imageSrc.length === 1) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"100%"}} alt="ImgPreview"></img>
+                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{ width: "100%" }} alt="ImgPreview"></img>
                                                 } else if (item.imageSrc.length === 2) {
                                                     return <img className="comicImage" src={require("../../images/" + image)} alt="ImgPreview"></img>
                                                 } else if (item.imageSrc.length === 4) {
-                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{width:"50%"}} alt="ImgPreview"></img>
+                                                    return <img className="comicImage" src={require("../../images/" + image)} style={{ width: "50%" }} alt="ImgPreview"></img>
                                                 } else {
                                                     return <></>
                                                 }
