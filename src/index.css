@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   margin: 0;
-  font-family: "Comic Sans MS", "Comic Sans";
+  font-family: "Comic Sans MS", "Comic Sans" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;

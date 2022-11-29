@@ -1,17 +1,36 @@
 import React from "react";
 import "./Header.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
+import widthHook from "../widthHook/widthHook";
+import {Tooltip, OverlayTrigger} from "react-bootstrap"
 
-export default class Header extends React.Component {
+class Header extends React.Component {
+    toPath = (path) => {
+        this.props.to(path)
+    }
+
+    renderTooltip = (props) => {
+        return (
+        <Tooltip id="button-tooltip" {...props}>
+            Simple tooltip
+        </Tooltip>
+        )
+    }
+
     render() {
         return (
             <div className="Header">
                 <div className="HeaderLogo">
-                    <h2>TaraKoh</h2>
+                    <h2 onClick={this.toPath.bind(this, '/home')}>TaraKoh</h2>
                     <h3>| Welcome to my personal webpage!</h3>
                 </div>
                 <div className="HeaderContainer">
-                    <i className="bi bi-github" role="img" aria-label="GitHub"></i>
+                    <OverlayTrigger
+                        placement="bottom"
+                        delay={{ hide: 450, show: 300 }}
+                        overlay={this.renderTooltip}>
+                        <i className="bi bi-github" aria-label="GitHub"></i>
+                    </OverlayTrigger>
                     <i className="bi bi-sina-weibo"></i>
                     <i className="bi bi-instagram"></i>
                     <i className="bi bi-r-square-fill"></i>
@@ -22,3 +41,6 @@ export default class Header extends React.Component {
         )
     }
 }
+
+const HeaderComponent = widthHook(Header)
+export default widthHook(HeaderComponent)

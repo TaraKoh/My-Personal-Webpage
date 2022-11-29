@@ -12,13 +12,20 @@
     margin: auto 0 auto 25px;
     color: white;
     font-size: 42px;
+    font-weight: bold;
 }
+
+.HeaderLogo:hover {
+    cursor: pointer;
+}
+
 .HeaderLogo h3 {
     display: inline-block;
     height: 100%;
     margin: 15px 0 auto 25px;
     color: white;
     font-size: 25px;
+    font-weight: bold;
 }
 .HeaderContainer {
     display: flex;

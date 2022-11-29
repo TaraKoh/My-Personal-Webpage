@@ -23,7 +23,7 @@ class Home extends React.PureComponent  {
       <div className="Homepage">
           <img className="Book hrefButton" src={bookButton} alt="Book"></img>
           <img className="About hrefButton" src={aboutButton} alt="About"></img>
-          <img className="WeChatSticker hrefButton" src={wechatStickerButton} alt="WeChatSticker"></img>
+          <img className="WeChatStickers hrefButton" src={wechatStickerButton} alt="WeChatStickers" onClick={this.toPath.bind(this, '/wechatstickers')}></img>
           <img className="Comics hrefButton" src={comicsButton} alt="Comics" onClick={this.toPath.bind(this, '/comics')}></img>
           <img className="Sketches hrefButton" src={sketchesButton} alt="Sketches"></img>
           <img className="Journal hrefButton" src={journalButton} alt="Journal"></img>
