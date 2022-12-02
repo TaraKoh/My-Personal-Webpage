@@ -27,7 +27,7 @@ class Header extends React.Component {
                 <div className="HeaderContainer">
                     <OverlayTrigger
                         placement="bottom"
-                        delay={{ hide: 450, show: 300 }}
+                        delay={{ hide: 450, show: 100 }}
                         overlay={this.renderTooltip}>
                         <i className="bi bi-github" aria-label="GitHub"></i>
                     </OverlayTrigger>

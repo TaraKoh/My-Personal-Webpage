@@ -45,6 +45,7 @@ export default class Comics extends React.Component {
             showData: {}
         }
     }
+    
     handleShow = (item) => {
         this.setState({
             isShow: true,
@@ -75,7 +76,7 @@ export default class Comics extends React.Component {
         return (
             <>
                 <div className="comics">
-                    <h2 className="comicsHeader">Here's the Collection of My Comics Published Online</h2>
+                    <h2 className="comicsHeader">Here are My Original Comic Works Published Online</h2>
                     <div className="comicsGird">
                         {
                             dataList.map((item, itemIndex) => {
