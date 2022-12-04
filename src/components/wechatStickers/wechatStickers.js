@@ -4,7 +4,7 @@ import copy from 'copy-to-clipboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./WechatStickers.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
-import { Tooltip, OverlayTrigger } from "react-bootstrap"
+import { Tooltip, OverlayTrigger, Alert } from "react-bootstrap"
 
 
 export default class WechatStickers extends React.Component {
@@ -45,6 +45,7 @@ export default class WechatStickers extends React.Component {
                 }
             ],
             isShow: false,
+            isAlertShow: false,
             showData: {}
         }
 
@@ -72,15 +73,32 @@ export default class WechatStickers extends React.Component {
         }
     }
 
-    copyUrl(url){
+    copyUrl = (url) => {
+        console.log(url)
         copy(url);
-        alert('复制成功');
-      };
+        this.setState({
+            isAlertShow: true,
+        }, ()=>{
+            setTimeout(()=>{
+                this.setState({
+                    isAlertShow: false,
+                })
+            }, 2000)
+        })
+    };
+
+    redirectPage = (url) => {
+        const w=window.open('about:blank');
+        w.location.href=url
+    };
 
     render() {
-        const { dataList, isShow, showData } = this.state
+        const { dataList, isShow, showData,isAlertShow } = this.state
         return (
-            <>
+            <>  
+                <Alert show={isAlertShow} variant="success">
+                    <i class="bi bi-hand-thumbs-up"></i>&nbsp;Copy Success!
+                </Alert>
                 <div className="wechatStickers">
                     <h2 className="stickersHeader">Here are My Original WeChat Sticker Collections</h2>
                     <div className="stickersGird">
@@ -88,8 +106,9 @@ export default class WechatStickers extends React.Component {
                             dataList.map((item, itemIndex) => {
                                 return (
                                     <>
-                                        <div className="window" key={itemIndex} onClick={this.handleShow.bind(this, item)}>
+                                        <div className="window" key={itemIndex}>
                                             <div className="mainBlock">
+                                                <div className="masking" onClick={this.handleShow.bind(this, item)}></div>
                                                 <div className="bannerBlock">
                                                     <img className="bannerImage" src={require("../../images/" + item.bannerPic)} alt="BannerImgPreview"></img>
                                                 </div>
@@ -112,13 +131,10 @@ export default class WechatStickers extends React.Component {
                                                             delay={{ hide: 100, show: 20 }}
                                                             overlay={(
                                                                 <Tooltip id="copy-button-tooltip">
-                                                                    Click to copy link and share in WeChat
+                                                                    Click to copy link and share it in WeChat
                                                                 </Tooltip>
                                                             )}>
-                                                            <button className="btn btn-dark" onClick={(e)=>{
-                                                                this.copyUrl(showData.shortLink)
-                                                                e.stopPropagation();
-                                                                e.nativeEvent.stopImmediatePropagation();}}><i className="bi bi-share"></i> Copy Link</button>
+                                                            <button className="btn btn-dark" onClick={this.copyUrl.bind(this, item.shortLink)}><i className="bi bi-share"></i> Copy Link</button>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger
                                                             placement="bottom"
@@ -128,7 +144,8 @@ export default class WechatStickers extends React.Component {
                                                                     Click to preview the promotional page of this series of stickers
                                                                 </Tooltip>
                                                             )}>
-                                                            <button className="btn btn-secondary"><i className="bi bi-link-45deg"></i> Preview</button>
+                                                            
+                                                            <button className="btn btn-secondary" onClick={ this.redirectPage.bind(this, item.promotionLink )}><i className="bi bi-link-45deg"></i> Preview</button>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger
                                                             placement="top"

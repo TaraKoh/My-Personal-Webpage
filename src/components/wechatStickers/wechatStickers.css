@@ -39,6 +39,13 @@
     display: block;
 }
 
+.masking {
+    width: 100%;
+    height: calc(100% - 20px - 38px);
+    background-color: transparent;
+    position: absolute;
+}
+
 .mainBlock {
     position: absolute;
     height: 100%;
@@ -131,7 +138,7 @@
 }
 
 #qrcode-button-tooltip {
-    background-color: white; 
+    background-color: white;
     opacity: 1;
     border-radius: 8px;
 }
@@ -150,7 +157,8 @@
     --bs-modal-padding: 2rem;
     --bs-modal-border-radius: 1.5rem;
     --bs-modal-bg: floralwhite;
-    --bs-modal-header-padding: 2rem 4rem 1rem 4rem;;
+    --bs-modal-header-padding: 2rem 4rem 1rem 4rem;
+    ;
 }
 
 .modalTitle {
@@ -160,4 +168,28 @@
 
 .btn-close {
     font-size: 30px;
+}
+
+
+.alert-success {
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    text-align: center;
+    top: 7%;
+}
+
+.alert-success {
+    position: absolute;
+    width: 180px;
+    left: calc(50% - 90px);
+    text-align: center;
+    top: 7%;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.alert {
+    --bs-alert-padding-x: 0rem;
+    --bs-alert-padding-y: 13px;
 }
