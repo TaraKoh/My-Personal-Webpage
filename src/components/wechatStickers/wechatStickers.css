@@ -1,3 +1,4 @@
+
 .wechatStickers {
     text-align: center;
     padding: 4rem 6rem;
@@ -19,7 +20,7 @@
     width: 100%;
 }
 
-.window {
+.stickerWindow {
     position: relative;
     background: #fbfaf8;
     border-radius: 10px;
@@ -27,45 +28,45 @@
     border: 2px solid darkgray;
 }
 
-.window:hover {
+.stickerWindow:hover {
     transform: scale(1.08);
     cursor: pointer;
     transition: transform 0.15s ease-in-out 0ms
 }
 
-.stickersGird .window::after {
+.stickersGird .stickerWindow::after {
     content: "";
     padding-bottom: 100%;
     display: block;
 }
 
-.masking {
+.stickerMasking {
     width: 100%;
     height: calc(100% - 20px - 38px);
     background-color: transparent;
     position: absolute;
 }
 
-.mainBlock {
+.stickerMainBlock {
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-.bannerBlock {
+.stickerBannerBlock {
     /* 给container指定宽高比 */
     aspect-ratio: 15 / 8;
     margin: 20px 25px 0 25px;
     border: 2px solid #a39a90;
 }
 
-.bannerImage {
+.stickerBannerImage {
     width: 100%;
     /* 图片大小自适应 */
     background-size: 100% 100%;
 }
 
-.bottomBlock {
+.stickerBottomBlock {
     display: flex;
     flex-direction: column;
     margin: 0px 25px;
@@ -73,25 +74,25 @@
     overflow: hidden;
 }
 
-.headingBlock {
+.stickerHeadingBlock {
     margin: 10px 0;
     align-items: center;
     display: flex;
 }
 
-.coverImageBlock {
+.stickerCoverImageBlock {
     width: 22%;
     aspect-ratio: 1 / 1;
     border: 1.5px dashed #a39a90;
     float: left;
 }
 
-.coverImage {
+.stickerCoverImage {
     width: 100%;
     background-size: 100% 100%;
 }
 
-.titleBlock {
+.stickerTitleBlock {
     width: 75%;
     height: 100%;
     float: right;
@@ -100,29 +101,29 @@
     padding: 10px 0 10px 25px;
 }
 
-.titleBlock .title {
+.stickerTitleBlock .stickerTitle {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     text-align: left;
 }
 
-.titleBlock .date {
+.stickerTitleBlock .stickerDate {
     font-size: 1.1rem;
     text-align: left;
 }
 
-.descriptionBlock {
+.stickerDescriptionBlock {
     height: 50px;
     flex-shrink: 0;
 }
 
-.description {
+.stickerDescription {
     font-size: 15px;
     font-weight: bold;
     line-height: 1.5em;
 }
 
-.urlBlock {
+.stickerUrlBlock {
     margin-top: 10px;
     display: flex;
     /* 减去bottomBlock左右各25px margin */
@@ -148,20 +149,20 @@
     background-color: white;
 }
 
-.qrCodeImage {
+.stickerQrCodeImage {
     width: 250px;
 }
 
 .modal {
     --bs-modal-width: 1000px;
-    --bs-modal-padding: 2rem;
+    --bs-modal-padding: 2rem 4rem;
     --bs-modal-border-radius: 1.5rem;
     --bs-modal-bg: floralwhite;
     --bs-modal-header-padding: 2rem 4rem 1rem 4rem;
     ;
 }
 
-.modalTitle {
+.stickerModalTitle {
     font-size: 2rem;
     font-weight: bold;
 }

@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.window {
+.comicWindow {
     position: relative;
     background: #fbfaf8;
     border-radius: 10px;
@@ -28,58 +28,58 @@
     border: 2px solid darkgray;
 }
 
-.window:hover {
+.comicWindow:hover {
     transform: scale(1.08);
     cursor: pointer;
     transition: transform 0.15s ease-in-out 0ms
 }
 
-.comicsGird .window::after {
+.comicsGird .comicWindow::after {
     content: "";
     padding-bottom: 100%;
     display: block;
 }
 
-.mainBlock {
+.comicMainBlock {
     position: absolute;
     height: 100%;
 }
 
-.pictureBlock {
+.comicPictureBlock {
     height: 64%;
     overflow: hidden;
     margin: 20px 20px 5px 20px;
     border: 2px solid #a39a90;
 }
 
-.bottomBlock {
+.comicBottomBlock {
     display: flex;
     flex-direction: column;
-    margin: 0px 30px 0px 30px;
+    margin: 0px 20px;
     height: 25%;
     overflow: hidden;
 }
 
-.line {
+.comicLine {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5px 5px 0 5px;
+    margin: 5px 0 0 0;
 }
 
 .comicImage {
     width: 50%;
 }
 
-.title,
-.date {
+.comicTitle,
+.comicDate {
     font-size: 1.2rem;
     margin: 0;
     color: #444444;
     font-weight: bold;
 }
 
-.description {
+.comicDescription {
     font-size: 0.9rem;
     margin: 0;
     color: #444444;
@@ -99,12 +99,12 @@
     --bs-modal-header-padding: 2rem 4rem 1rem 4rem;;
 }
 
-.modalTitle {
+.comicModalTitle {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.modalDate {
+.comicModalDate {
     font-size: 1.3rem;
 }
 
@@ -112,7 +112,8 @@
     font-size: 30px;
 }
 
-.modal-body p {
-    margin: 0 2rem 2rem 2rem;
+.modal-body .comicModalDescription {
     font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8rem;
 }

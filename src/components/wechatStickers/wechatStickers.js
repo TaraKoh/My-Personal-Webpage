@@ -67,7 +67,7 @@ export default class WechatStickers extends React.Component {
     fullStickerPic = () => {
         const { fullPic } = this.state.showData;
         if (fullPic) {
-            return <img src={require("../../images/" + fullPic)} style={{ width: "100%" }} alt="FullImgPreview"></img>
+            return <img src={require("../../images/" + fullPic)} style={{ width: "100%", border: "2px dotted lightgray" }} alt="FullImgPreview"></img>
         } else {
             return ''
         }
@@ -106,26 +106,26 @@ export default class WechatStickers extends React.Component {
                             dataList.map((item, itemIndex) => {
                                 return (
                                     <>
-                                        <div className="window" key={itemIndex}>
-                                            <div className="mainBlock">
-                                                <div className="masking" onClick={this.handleShow.bind(this, item)}></div>
-                                                <div className="bannerBlock">
-                                                    <img className="bannerImage" src={require("../../images/" + item.bannerPic)} alt="BannerImgPreview"></img>
+                                        <div className="stickerWindow" key={itemIndex}>
+                                            <div className="stickerMainBlock">
+                                                <div className="stickerMasking" onClick={this.handleShow.bind(this, item)}></div>
+                                                <div className="stickerBannerBlock">
+                                                    <img className="stickerBannerImage" src={require("../../images/" + item.bannerPic)} alt="BannerImgPreview"></img>
                                                 </div>
-                                                <div className="bottomBlock">
-                                                    <div className="headingBlock">
-                                                        <div className="coverImageBlock">
-                                                            <img className="coverImage" src={require("../../images/" + item.coverPic)} alt="CoverImgPreview"></img>
+                                                <div className="stickerBottomBlock">
+                                                    <div className="stickerHeadingBlock">
+                                                        <div className="stickerCoverImageBlock">
+                                                            <img className="stickerCoverImage" src={require("../../images/" + item.coverPic)} alt="CoverImgPreview"></img>
                                                         </div>
-                                                        <div className="titleBlock">
-                                                            <h3 className="title">Name: {item.title}</h3>
-                                                            <h4 className="date">Launch Date: {item.date}</h4>
+                                                        <div className="stickerTitleBlock">
+                                                            <h3 className="stickerTitle">Name: {item.title}</h3>
+                                                            <h4 className="stickerDate">Launch Date: {item.date}</h4>
                                                         </div>
                                                     </div>
-                                                    <div className="descriptionBlock">
-                                                        <p className="description">{item.description}</p>
+                                                    <div className="stickerDescriptionBlock">
+                                                        <p className="stickerDescription">{item.description}</p>
                                                     </div>
-                                                    <div className="urlBlock">
+                                                    <div className="stickerUrlBlock">
                                                         <OverlayTrigger
                                                             placement="bottom"
                                                             delay={{ hide: 100, show: 20 }}
@@ -152,7 +152,7 @@ export default class WechatStickers extends React.Component {
                                                             delay={{ hide: 100, show: 20 }}
                                                             overlay={(
                                                                 <Tooltip id="qrcode-button-tooltip">
-                                                                    <img className="qrCodeImage" src={require("../../images/" + item.qrCodePic)} alt="QRCodePreview"></img>
+                                                                    <img className="stickerQrCodeImage" src={require("../../images/" + item.qrCodePic)} alt="QRCodePreview"></img>
                                                                 </Tooltip>
                                                             )}>
                                                             <button className="btn btn-warning"><i className="bi bi-qr-code"></i> QR-Code</button>
@@ -170,7 +170,7 @@ export default class WechatStickers extends React.Component {
                 <Modal show={isShow} onHide={this.handleClose} >
                     <Modal.Header closeButton>
                         <Modal.Title>
-                            <h2 className="modalTitle">{showData.title}</h2>
+                            <h2 className="stickerModalTitle">{showData.title}</h2>
                             {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
                         </Modal.Title>
                     </Modal.Header>
