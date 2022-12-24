@@ -78,8 +78,8 @@ export default class WechatStickers extends React.Component {
         copy(url);
         this.setState({
             isAlertShow: true,
-        }, ()=>{
-            setTimeout(()=>{
+        }, () => {
+            setTimeout(() => {
                 this.setState({
                     isAlertShow: false,
                 })
@@ -88,14 +88,14 @@ export default class WechatStickers extends React.Component {
     };
 
     redirectPage = (url) => {
-        const w=window.open('about:blank');
-        w.location.href=url
+        const w = window.open('about:blank');
+        w.location.href = url
     };
 
     render() {
-        const { dataList, isShow, showData,isAlertShow } = this.state
+        const { dataList, isShow, showData, isAlertShow } = this.state
         return (
-            <>  
+            <>
                 <Alert show={isAlertShow} variant="success">
                     <i class="bi bi-hand-thumbs-up"></i>&nbsp;Copy Success!
                 </Alert>
@@ -144,8 +144,8 @@ export default class WechatStickers extends React.Component {
                                                                     Click to preview the promotional page of this series of stickers
                                                                 </Tooltip>
                                                             )}>
-                                                            
-                                                            <button className="btn btn-secondary" onClick={ this.redirectPage.bind(this, item.promotionLink )}><i className="bi bi-link-45deg"></i> Preview</button>
+
+                                                            <button className="btn btn-secondary" onClick={this.redirectPage.bind(this, item.promotionLink)}><i className="bi bi-link-45deg"></i> Preview</button>
                                                         </OverlayTrigger>
                                                         <OverlayTrigger
                                                             placement="top"

@@ -1,5 +1,5 @@
 .comics {
-    /* height: 93%; */
+    min-height: calc(100% - 75px);
     text-align: center;
     padding: 4rem 4rem;
     background: floralwhite;

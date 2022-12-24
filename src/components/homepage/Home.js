@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.css";
-import bookButton from "../../images/BOOK.png"
-import aboutButton from "../../images/ABOUT.png"
-import wechatStickerButton from "../../images/WECHATSTICKER.png"
-import comicsButton from "../../images/COMICS.png"
-import sketchesButton from "../../images/SKETCHES.png"
-import journalButton from "../../images/JOURNAL.png"
+import bookButton from "../../images/Button_BOOK.png"
+import aboutButton from "../../images/Button_ABOUT.png"
+import wechatStickerButton from "../../images/Button_WECHATSTICKER.png"
+import comicsButton from "../../images/Button_COMICS.png"
+import sketchesButton from "../../images/Button_SKETCHES.png"
+import onlineStoreButton from "../../images/Button_ONLINESTORE.png"
 import widthHook from "../widthHook/widthHook";
 
 class Home extends React.PureComponent  {
@@ -22,11 +22,11 @@ class Home extends React.PureComponent  {
     return (
       <div className="Homepage">
           <img className="Book hrefButton" src={bookButton} alt="Book"></img>
-          <img className="About hrefButton" src={aboutButton} alt="About"></img>
+          <img className="About hrefButton" src={aboutButton} alt="About" onClick={this.toPath.bind(this, '/about')}></img>
           <img className="WeChatStickers hrefButton" src={wechatStickerButton} alt="WeChatStickers" onClick={this.toPath.bind(this, '/wechatstickers')}></img>
           <img className="Comics hrefButton" src={comicsButton} alt="Comics" onClick={this.toPath.bind(this, '/comics')}></img>
           <img className="Sketches hrefButton" src={sketchesButton} alt="Sketches"></img>
-          <img className="Journal hrefButton" src={journalButton} alt="Journal"></img>
+          <img className="OnlineStore hrefButton" src={onlineStoreButton} alt="Online Store"></img>
       </div>
     );
   }

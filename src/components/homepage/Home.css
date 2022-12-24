@@ -1,6 +1,6 @@
 .Homepage{
   position: relative;
-  height: 93%;
+  height: calc(100% - 50px - 25px);
   background-image: url(../../images/HOMEPAGE.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -12,6 +12,7 @@
   position: absolute;
   top: 38%;
   left: 30%;
+  display: none;
 }
 
 .About {
@@ -36,12 +37,14 @@
   position: absolute;
   right: 17%;
   top: 4%;
+  display: none;
 }
 
-.Journal{
+.OnlineStore{
   position: absolute;
   right: 6%;
   top: 17%;
+  display: none;
 }
 
 .hrefButton{
