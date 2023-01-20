@@ -9,6 +9,12 @@ export default class Comics extends React.Component {
         this.state = {
             dataList: [
                 {
+                    title: "COVID-19 Record",
+                    date: "2022/12/31",
+                    description: "It's a record of the year-end chaos and how we got COVID-19 in 2022.",
+                    imageSrc: ["Covid1.png", "Covid2.png", "Covid3.png"],
+                    paddingPattern: 1
+                }, {
                     title: "Soup",
                     date: "2022/11/09",
                     description: "A bowl of homemade hot SOUP: There would always be a specific food for each of us that carries the most warmest memories.",
