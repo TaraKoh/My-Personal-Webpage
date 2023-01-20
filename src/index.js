@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer"
 import About from "./components/about/About"
 import Comics from "./components/comics/Comics"
 import WechatStickers from "./components/wechatstickers/WechatStickers"
+import Sketches from "./components/sketches/Sketches"
 import "./index.css";
 
 function Index() {
@@ -18,6 +19,7 @@ function Index() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/comics" element={<Comics />}></Route>
           <Route path="/wechatstickers" element={<WechatStickers />}></Route>
+          <Route path="/sketches" element={<Sketches />}></Route>
         </Routes>
         <Footer></Footer>
     </HashRouter>
