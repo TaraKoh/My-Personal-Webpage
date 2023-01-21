@@ -22,10 +22,10 @@ class Header extends React.Component {
         switch (type) {
             case "email":
                 id = "email-button-tooltip"
-                text = "Click to copy my email address: example@outlook.com"
+                text = "Click to copy my email address: tarakoh@outlook.com"
                 props = {
                     className: "bi bi-envelope",
-                    onClick: this.copyEmail.bind(this, "example@outlook.com")
+                    onClick: this.copyEmail.bind(this, "tarakoh@outlook.com")
                 }
                 break;
             case "github":
@@ -49,7 +49,7 @@ class Header extends React.Component {
                 text = "Click to visit my Instagram"
                 props = {
                     className: "bi bi-instagram",
-                    onClick: this.redirectPage.bind(this, "https://www.instagram.com/tarakoooh/")
+                    onClick: this.redirectPage.bind(this, "https://www.instagram.com/tarakoh_/")
                 }
                 break;
             case "behance":
@@ -57,7 +57,7 @@ class Header extends React.Component {
                 text = "Click to visit my Behance"
                 props = {
                     className: "bi bi-behance",
-                    // onClick: this.redirectPage.bind(this, "https://weibo.com/u/5705374837")
+                    onClick: this.redirectPage.bind(this, "https://www.behance.net/taragao")
                 }
                 break;
             case "red":
