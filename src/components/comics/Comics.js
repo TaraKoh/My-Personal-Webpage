@@ -24,22 +24,22 @@ export default class Comics extends React.Component {
                     title: "Watersports",
                     date: "2022/10/13",
                     description: "Here's the final chapter of this summer's comic traveling journal in Sanya, and I tried a more complete way of storyboard and multi-frame comic to record these happy memories. <br /> After finally bought a surfing swimsuit (see my previous post), we set off to play in the sea the next day! Initially we planned to go to other Islands, but unexpectedly we found that there had the same project in Yalong Bay. Surely it is better to play just near the hotel, saving the trouble of long-distance driving.<br />My most favorite project was the parasailing, where one could experience the feeling of flying freely in the sky, in a very stable way that will not get dizzy.<br />Wondering when the next trip will be...",
-                    imageSrc: ["Watersport1.jpg", "Watersport2.jpg", "Watersport3.jpg"],
+                    imageSrc: ["Watersports1.png", "Watersports2.png", "Watersports3.png"],
                     paddingPattern: 0
                 }, {
-                    title: "Comic Diaries: Aug22",
+                    title: "Comic Diaries: Aug,2022",
                     date: "2022/09/01",
                     description: "A random recording from a ex-journal & stationery enthusiast <br /> Could you popsicle be tough and strong enough so that I can have you elegantly!?! <br /> Thinking of having a bagel with full cream cheese and a large cup of hot latte makes it much more motivated to get up!!!😍                    ",
                     imageSrc: ["ComicDiary2208_1.jpg", "ComicDiary2208_2.jpg", "ComicDiary2208_3.jpg", "ComicDiary2208_4.jpg", "ComicDiary2208_5.jpg"],
                     paddingPattern: 1
                 },{
-                    title: "Outlets",
+                    title: "Huge Loss in Buying Swimsuit",
                     date: "2022/08/28",
                     description: "This is a travelogue of having a huge loss in buying swimsuit due to my procrastination and laziness😅",
                     imageSrc: ["Outlets1.jpg", "Outlets2.jpg", "Outlets3.jpg"],
                     paddingPattern: 1
                 }, {
-                    title: "清补凉",
+                    title: "Ching bo leung",
                     date: "2022/08/23",
                     description: "I would recommend everyone travelling to Hainan try this Ching bo leung (清补凉) which is a refreshing dessert to have in hot weather😋",
                     imageSrc: ["Qingbuliang.jpg"],
@@ -47,15 +47,15 @@ export default class Comics extends React.Component {
                 }, {
                     title: "What's in Lobbster",
                     date: "2022/08/14",
-                    description: "Have you ever eaten something weird in a lobster? This is a real story from my magical experience in The Marriot in Sanya. It's also my attempt at a brand new style of graphic novel! 'Why is there a chewing gum in my grilled lobster?' 'This stuff is definitely chewing gum from whatever angles ...' Now I know it's neither a chewing gum NOR ITS BRAIN...",
+                    description: "Have you ever eaten something weird in a lobster? This is a real story from my magical experience in The Marriot in Sanya. 'Why is there a chewing gum in my grilled lobster?' 'This stuff is definitely chewing gum from whatever angles ...' Now I know it's neither a chewing gum NOR ITS BRAIN...",
                     imageSrc: ["Fishbar1.jpg", "Fishbar2.jpg", "Fishbar3.jpg"],
                     paddingPattern: 0
 
                 }, {
-                    title: "Sanya Travelogue",
+                    title: "Trip in Hainan - Comic Illustration",
                     date: "2022/08/09",
-                    description: "First travelogue in Sanya, Hainan🍹Also my fisrt attempt in drawing comics on computer <br /> It's such a pleasant journey in car to avoid the heat outside <br /> Guess I'm obsessed with the feeling of free and casual in a road trip❤️",
-                    imageSrc: ["Sanya1.png", "Sanya2.jpg", "Sanya3.jpg", "Sanya4.jpg", "Sanya5.jpg", "Sanya6.jpg"],
+                    description: "Here are some comic illustrations I drew half year ago to record our honeymoon trip in Sanya, Hainan last summer. They were also my first attempt to draw with photoshop, so they might seem rough and immature in lines and perspection😅 But I've made great progress these days!!",
+                    imageSrc: ["Sanya1.png", "Sanya2.jpg", "Sanya3.jpg", "Sanya4.jpg"],
                     paddingPattern: 1
                 }
             ],
